@@ -1,0 +1,37 @@
+
+GET http://localhost:3000/
+
+###
+GET http://localhost:3000/date
+
+###
+GET http://localhost:3000/books/
+
+###
+GET http://localhost:3000/books/?offset=0&limit=3&search_q=raja&order_by=price&order=DESC
+
+
+###
+GET http://localhost:3000/books/8
+
+###
+POST http://localhost:3000/books/
+Content-Type: application/json
+
+{
+  "title": "Whispers of the Forgotten Realm",
+  "author_id": 7,
+  "rating": 4.6,
+  "rating_count": 134829,
+  "review_count": 4821,
+  "description": "A fantasy epic following a young warrior who discovers a hidden world of magic, betrayal, and destiny while uncovering secrets about her own lineage.",
+  "pages": 512,
+  "date_of_publication": "March 14th 2012",
+  "edition_language": "English",
+  "price": 750,
+  "online_stores": "Amazon, Barnes & Noble, Kobo, Booktopia, Google Play, Waterstones"
+}
+
+###
+DELETE http://localhost:3000/books/45
+
